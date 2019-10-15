@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,700&display=swap&subset=latin-ext");
+@import '~reset.css';
+body {
+  background-color: #09d3ac;
+  font-family: "Open Sans";
+}
+
+header#hd {
+  width: 1850px;
+  height: 950px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+header#hd .headerimg {
+  width: 48%;
+  height: 100%;
+  background: white url("../assets/assets/Home-Hero-Image.jpg") right top;
+}
+header#hd .info {
+  width: 48%;
+  height: 100%;
+  background: white;
+}
+
+/*# sourceMappingURL=main.css.map */
