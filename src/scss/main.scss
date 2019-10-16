@@ -4,7 +4,7 @@
 @import '~reset.css';
 
 body{
-  background-color: #09d3ac;
+  background-color: white;
   font-family:$font-base;
 }
 header#hd{
@@ -26,3 +26,88 @@ header#hd{
     background: white;
   }
 }
+div.frstnav{
+  height: 50px;
+  font-size: 16px;
+  text-align: right;
+  background: white;
+  padding: 20px;
+
+
+  a{
+    text-decoration: none;
+    padding: 10px;
+    color: gray;
+
+  }
+  a:hover{
+    border: 1px solid yellow;
+  }
+
+
+
+}
+div.mojdiv{
+  margin-top: 15px;
+}
+
+div.secnav{
+  padding: 15px;
+  font-size:20px ;
+  display: flex;
+  justify-content: flex-end;
+
+  a{
+    font-family: $font-base;
+    font-size: 20px;
+    color: rgba(1,5,36,0.67);
+    text-decoration: none;
+    padding: 10px;
+  }
+}
+div.desc{
+  text-align: center;
+  font-family: $font-base;
+  padding-top: 300px;
+  color: gray;
+ font-size: 35px;
+  line-height: 1.5;
+
+}
+div.img1{
+  background-image: url("../assets/assets/Decoration.svg");
+  height: 100px;
+  width: 300px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+div.btns {
+  font-family: $font-base;
+  display: flex;
+  justify-content: center;
+  width:700px;
+  position: absolute;
+  z-index: 100;
+  top:600px;
+  left:57%;
+  margin-top:50px;
+  a{
+    font-size: 35px;
+    text-transform: uppercase;
+    display: block;
+    width:250px;
+    text-align: center;
+    margin-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid gray;
+    text-decoration: none;
+    color: gray;
+  }
+  a:hover{
+    border: black 1px solid;
+  }
+}
+
