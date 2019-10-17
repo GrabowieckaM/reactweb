@@ -25,7 +25,7 @@ function HomeHeader() {
                             <Link to={"/"}>O nas</Link>
                             <Link to={"/"}>Fundacje i organizacje</Link>
                             <Link to={"/"}>Kontakt</Link>
-                            <Route path={"/"} component={HomeThreeColumns}/>
+                            {/*<Route path={"/"} component={HomeThreeColumns}/>*/}
                             {/*<Route path={"/"} component={HomeAboutUs}/>*/}
                             {/*<Route path={"/"} exact component={HomeWHosHelping}/>*/}
                             {/*<Route path={"/"} exact component={HomeContact}/>*/}

@@ -75,7 +75,7 @@ div.img1 {
   margin-top: 50px;
 }
 
-div.btns {
+.btns {
   font-family: "Open Sans";
   display: flex;
   justify-content: center;
@@ -86,7 +86,7 @@ div.btns {
   left: 57%;
   margin-top: 50px;
 }
-div.btns a {
+.btns a {
   font-size: 35px;
   text-transform: uppercase;
   display: block;
@@ -99,8 +99,278 @@ div.btns a {
   text-decoration: none;
   color: gray;
 }
-div.btns a:hover {
+.btns a:hover {
   border: black 1px solid;
+}
+
+div.tc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+  width: 100%;
+  background-color: #FAD648;
+  background-image: url("../assets/assets/material.jpg");
+  color: #5E5322;
+  font-family: "Open Sans";
+  margin-bottom: 30px;
+}
+div.tc div.fc {
+  text-align: center;
+  width: 25%;
+}
+div.tc div.fc h1 {
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+div.tc div.fc h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+div.tc div.fc p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+div.onas {
+  height: 800px;
+  width: 100%;
+  background-color: #F0F1F1;
+  display: flex;
+}
+div.onas div.onasr {
+  width: 50%;
+  background-image: url("../assets/assets/People.jpg");
+}
+div.onas div.onasl {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+div.onas div.onasl div.onasd {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  color: #3C3C3C;
+}
+div.onas div.onasl div.onasd h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+div.onas div.onasl div.onasd .imgo {
+  background-image: url("../assets/assets/Decoration.svg");
+  width: 250px;
+  height: 33px;
+  margin-bottom: 50px;
+}
+div.onas div.onasl div.onasd p {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+div.onas div.onasl div.imga {
+  height: 150px;
+  width: 300px;
+  position: absolute;
+  right: 10px;
+  top: 620px;
+  background-image: url("../assets/assets/Signature.svg");
+  background-repeat: no-repeat;
+}
+
+div.foursteps {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+}
+div.foursteps div.deco {
+  width: 250px;
+  height: 50px;
+  background-image: url("../assets/assets/Decoration.svg");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+div.foursteps .step1 {
+  width: 100%;
+  height: 25%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3C3C3C;
+  font-size: 35px;
+}
+div.foursteps .step2 {
+  width: 100%;
+  height: 50%;
+  background: #F0F1F1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.foursteps .step2 .cont {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #737373;
+  font-family: "Open Sans";
+}
+div.foursteps .step2 .cont .part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+}
+div.foursteps .step2 .cont .part h1 {
+  font-size: 20px;
+}
+div.foursteps .step2 .cont .part h1:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 15px;
+  border-bottom: 2px solid #737373;
+}
+div.foursteps .step2 .cont .part p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+div.foursteps #p0 div.svg {
+  background-image: url("../assets/assets/Icon-1.svg");
+  height: 100px;
+  width: 75px;
+  background-repeat: no-repeat;
+}
+div.foursteps #p1 div.svg {
+  background-image: url("../assets/assets/Icon-2.svg");
+  height: 100px;
+  width: 75px;
+  background-repeat: no-repeat;
+}
+div.foursteps #p2 div.svg {
+  background-image: url("../assets/assets/Icon-3.svg");
+  height: 100px;
+  width: 75px;
+  background-repeat: no-repeat;
+}
+div.foursteps #p3 div.svg {
+  background-image: url("../assets/assets/Icon-4.svg");
+  height: 100px;
+  width: 75px;
+  background-repeat: no-repeat;
+}
+div.foursteps .step3 {
+  width: 100%;
+  height: 25%;
+  background: white;
+  position: relative;
+}
+div.foursteps .step3 .btns {
+  position: absolute;
+  top: -20px;
+  left: 600px;
+}
+
+.contact {
+  height: 1000px;
+  width: 100%;
+  display: flex;
+}
+.contact .contl {
+  width: 60%;
+  height: 100%;
+  background-image: url("../assets/assets/Background-Contact-Form.jpg");
+  opacity: 0.1;
+}
+.contact .contr {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  background-color: rgba(1, 5, 36, 0.01);
+}
+.contact .contr div.deco {
+  width: 250px;
+  height: 50px;
+  background-image: url("../assets/assets/Decoration.svg");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.contact .contr h2 {
+  font-size: 30px;
+  color: #3C3C3C;
+}
+.contact .contr .form1 {
+  width: 100%;
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  font-family: "Open Sans";
+}
+.contact .contr .form1 .part1 {
+  display: flex;
+}
+.contact .contr .form1 .part2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+}
+.contact .contr .form1 h1 {
+  text-align: left;
+  font-weight: bold;
+  color: #737373;
+}
+.contact .contr .form1 input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-right: 20px;
+  width: 240px;
+  font-size: 18px;
+  background-color: rgba(1, 5, 36, 0.01);
+}
+.contact .contr .form1 input::placeholder {
+  color: #737373;
+}
+.contact .contr .form1 textarea {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: rgba(1, 5, 36, 0.01);
+}
+.contact .contr textarea::placeholder {
+  color: #737373;
+  font-size: 16px;
+}
+.contact .contr .buttoncont {
+  margin-top: 30px;
+}
+.contact .contr .buttoncont button {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  background-color: rgba(1, 5, 36, 0.01);
+  border: 1px solid #737373;
+  color: #737373;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
