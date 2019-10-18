@@ -373,4 +373,141 @@ div.foursteps .step3 .btns {
   font-size: 20px;
 }
 
+footer.ftr {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #737373;
+}
+
+.logoutcont,
+.logincont,
+.registrycont {
+  height: 500px;
+  width: 1900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoutcont .logout,
+.logoutcont .login,
+.logincont .logout,
+.logincont .login,
+.registrycont .logout,
+.registrycont .login {
+  height: auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans";
+  color: #3C3C3C;
+  text-align: center;
+}
+.logoutcont .logout h1,
+.logoutcont .login h1,
+.logincont .logout h1,
+.logincont .login h1,
+.registrycont .logout h1,
+.registrycont .login h1 {
+  font-size: 40px;
+}
+.logoutcont .logout .deco,
+.logoutcont .login .deco,
+.logincont .logout .deco,
+.logincont .login .deco,
+.registrycont .logout .deco,
+.registrycont .login .deco {
+  width: 250px;
+  height: 50px;
+  background-image: url("../assets/assets/Decoration.svg");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.logoutcont .logout a,
+.logoutcont .login a,
+.logincont .logout a,
+.logincont .login a,
+.registrycont .logout a,
+.registrycont .login a {
+  border: 1px solid #737373;
+  padding: 20px;
+}
+.logoutcont .logout a:hover,
+.logoutcont .login a:hover,
+.logincont .logout a:hover,
+.logincont .login a:hover,
+.registrycont .logout a:hover,
+.registrycont .login a:hover {
+  border: 1px solid #3C3C3C;
+}
+.logoutcont .logout .pages,
+.logoutcont .login .pages,
+.logincont .logout .pages,
+.logincont .login .pages,
+.registrycont .logout .pages,
+.registrycont .login .pages {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.logincont,
+div.registrycont {
+  height: 800px;
+}
+div.logincont a,
+div.registrycont a {
+  border: none;
+}
+div.logincont a:hover,
+div.registrycont a:hover {
+  border: 1px #737373 solid;
+}
+
+.logform {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 500px;
+  font-family: "Open Sans";
+  align-items: center;
+}
+.logform form {
+  height: 270px;
+  width: 400px;
+  background-color: #F0F1F1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+}
+.logform form label {
+  padding-top: 30px;
+  font-weight: bold;
+}
+.logform form input {
+  margin-top: 20px;
+  background-color: #F0F1F1;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #737373;
+  font-size: 18px;
+  width: 100%;
+}
+
+.registrycont .logform {
+  height: 450px;
+}
+.registrycont .logform form {
+  height: 400px;
+}
+
 /*# sourceMappingURL=main.css.map */

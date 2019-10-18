@@ -17,9 +17,9 @@ function Home() {
             <HomeHeader/>
             <HomeThreeColumns/>
             <Home4Steps/>
-            <HomeContact/>
             <HomeAboutUs/>
             <HomeWHosHelping/>
+            <HomeContact/>
 
         </div>
 

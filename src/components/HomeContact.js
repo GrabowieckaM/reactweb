@@ -3,6 +3,7 @@ import React from 'react';
 function HomeContact() {
 
     return(
+        <>
         <div className="contact">
             <div className="contl">
 
@@ -36,6 +37,12 @@ function HomeContact() {
             </div>
 
         </div>
+            <footer className='ftr'>
+            <h1>Copyright by CodersLab</h1>
+
+            </footer>
+            </>
+
     );
 
 }

@@ -44,11 +44,11 @@ function HomeHeader() {
 
                     </div>
                     <div className='btns'>
-                        <BrowserRouter>
-                            <Link path='/log'>Oddaj<br/> rzeczy</Link>
-                            <Link path='/log'>Zorganizuj zbiórke</Link>
-                            <Route path='/log' exact component={LoginPage}/>
-                        </BrowserRouter>
+
+                            <a href='/log'>Oddaj<br/> rzeczy</a>
+                            <a href='/log'>Zorganizuj zbiórke</a>
+
+
                     </div>
 
 

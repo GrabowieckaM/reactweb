@@ -12,6 +12,7 @@ import HomeAboutUs from "./components/HomeAboutUs";
 import HomeWHosHelping from "./components/HomeWhosHelping";
 import HomeThreeColumns from "./components/HomeThreeColumn";
 import HomeHeader from "./components/HomeHeader";
+import Logout from "./components/logout";
 
 class App extends React.Component{
 
@@ -24,9 +25,11 @@ class App extends React.Component{
             <BrowserRouter>
                     <Link to={"/log"}>Zaloguj</Link>
                     <Link to={"/registry"}>Załóż konto</Link>
+                    <Link to={"/logout"}>Wyloguj</Link>
                     <Link to={"/"}>Strona główna</Link>
                     <Route path={"/log"} component={LoginPage}/>
                     <Route path={"/registry"} exact component={RegistryPage}/>
+                     <Route path={"/logout"} exact component={Logout}/>
                      <Route path={"/"} exact component={Home}/>
 
             </BrowserRouter>

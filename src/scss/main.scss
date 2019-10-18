@@ -418,3 +418,118 @@ div.foursteps{
 
   }
 }
+//FOOTER______________________________________________
+footer.ftr{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $c4;
+}
+
+//LOGOUT________________________________________________
+.logoutcont,
+.logincont,
+.registrycont{
+  height: 500px;
+  width: 1900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logout,
+  .login{
+    height: auto;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-base;
+    color: $c5;
+    text-align: center;
+    h1{
+      font-size: 40px;
+    }
+    .deco{
+      width:250px;
+      height: 50px;
+      background-image: url("../assets/assets/Decoration.svg");
+      background-repeat: no-repeat;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+    a{
+      border: 1px solid $c4;
+      padding: 20px;
+    }
+    a:hover{
+      border: 1px solid $c5;
+    }
+
+    .pages{
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+//LOGOWANIE____________________________________________
+div.logincont,
+div.registrycont{
+  height: 800px;
+  a{
+    border: none;
+  }
+  a:hover{
+    border:1px $c4 solid;
+  }
+}
+
+
+.logform{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 500px;
+  font-family: $font-base;
+
+  align-items: center;
+  form{
+    height: 270px;
+    width:400px;
+    background-color: $c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+
+    label{
+      padding-top: 30px;
+      font-weight: bold;
+
+    }
+
+
+    input{
+      margin-top: 20px;
+      background-color: $c1;
+      border-top: none;
+      border-left: none;
+      border-right:none;
+      border-bottom: 2px solid $c4;
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+}
+.registrycont{
+  .logform{
+    height: 450px;
+    form{
+      height: 400px;
+    }
+  }
+}

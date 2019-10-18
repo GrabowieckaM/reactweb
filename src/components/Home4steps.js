@@ -47,10 +47,10 @@ function Home4Steps() {
             </div>
             <div className="step3">
                 <div className='btns'>
-                    <BrowserRouter>
-                        <Link path='/log'>Oddaj<br/> rzeczy</Link>
-                        <Route path='/log' exact component={LoginPage}/>
-                    </BrowserRouter>
+
+                        <a href='/log'>Oddaj<br/> rzeczy</a>
+
+
                 </div>
             </div>
 
