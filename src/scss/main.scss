@@ -8,7 +8,7 @@ body{
   font-family:$font-base;
 }
 header#hd{
-  width: 1850px;
+  width: 100%;
   height: 950px;
   background-color: white;
   display: flex;
@@ -472,6 +472,18 @@ footer.ftr{
       width: 400px;
       display: flex;
       justify-content: space-between;
+
+      input{
+        background: white;
+        border: 1px solid $c4;
+        padding: 20px;
+        color: gray;
+        font-family: $font-base;
+        font-size: 16px;
+      }
+      input:hover{
+        border: 1px solid $c5;
+      }
     }
   }
 }
@@ -530,6 +542,85 @@ div.registrycont{
     height: 450px;
     form{
       height: 400px;
+    }
+  }
+}
+
+//WALIDACJA__________________________________
+.check{
+  font-family: $font-base;
+  color: red;
+  padding-top: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border-top:1px solid red ;
+
+}
+
+//WHOS HELPING_____________________________________
+div.whcont{
+  width: 100%;
+  height: 900px;
+  font-family: $font-base;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color:$c5;
+  font-size: 40px;
+  .deco{
+    width:250px;
+    height: 50px;
+    background-image: url("../assets/assets/Decoration.svg");
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    width:40%;
+
+    button{
+      background-color: white;
+      border: none;
+      font-size: 22px;
+      color:$c4;
+      width: 200px;
+      padding: 15px;
+
+    }
+    button:focus{
+      outline-color: gray;
+    }
+  }
+
+  .bigcontain{
+    width: 70%;
+    height:600px ;
+  }
+
+  .zzz{
+    background-color: #09d3ac;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+//SCROLLLLL__________________________________________________________
+div.navbar{
+  ul {
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      font-family: $font-base;
+      font-size: 20px;
+      color: rgba(1, 5, 36, 0.67);
+      text-decoration: none;
+      padding: 10px;
     }
   }
 }

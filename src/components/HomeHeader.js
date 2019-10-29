@@ -18,23 +18,6 @@ function HomeHeader() {
                 </div>
                 <div className='info'>
 
-                    <div className='secnav'>
-                        <BrowserRouter>
-
-                            <Link to={'/'} >O co chodzi</Link>
-                            <Link to={"/"}>O nas</Link>
-                            <Link to={"/"}>Fundacje i organizacje</Link>
-                            <Link to={"/"}>Kontakt</Link>
-                            {/*<Route path={"/"} component={HomeThreeColumns}/>*/}
-                            {/*<Route path={"/"} component={HomeAboutUs}/>*/}
-                            {/*<Route path={"/"} exact component={HomeWHosHelping}/>*/}
-                            {/*<Route path={"/"} exact component={HomeContact}/>*/}
-
-
-
-                        </BrowserRouter>
-                    </div>
-
                     <div className='desc'>
                         <h1>Zacznij pomagać!</h1>
                         <h1>Oddaj niechciane rzeczy w zaufane ręce!</h1>

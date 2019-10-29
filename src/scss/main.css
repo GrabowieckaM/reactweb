@@ -6,7 +6,7 @@ body {
 }
 
 header#hd {
-  width: 1850px;
+  width: 100%;
   height: 950px;
   background-color: white;
   display: flex;
@@ -456,6 +456,27 @@ footer.ftr {
   display: flex;
   justify-content: space-between;
 }
+.logoutcont .logout .pages input,
+.logoutcont .login .pages input,
+.logincont .logout .pages input,
+.logincont .login .pages input,
+.registrycont .logout .pages input,
+.registrycont .login .pages input {
+  background: white;
+  border: 1px solid #737373;
+  padding: 20px;
+  color: gray;
+  font-family: "Open Sans";
+  font-size: 16px;
+}
+.logoutcont .logout .pages input:hover,
+.logoutcont .login .pages input:hover,
+.logincont .logout .pages input:hover,
+.logincont .login .pages input:hover,
+.registrycont .logout .pages input:hover,
+.registrycont .login .pages input:hover {
+  border: 1px solid #3C3C3C;
+}
 
 div.logincont,
 div.registrycont {
@@ -508,6 +529,74 @@ div.registrycont a:hover {
 }
 .registrycont .logform form {
   height: 400px;
+}
+
+.check {
+  font-family: "Open Sans";
+  color: red;
+  padding-top: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border-top: 1px solid red;
+}
+
+div.whcont {
+  width: 100%;
+  height: 900px;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #3C3C3C;
+  font-size: 40px;
+}
+div.whcont .deco {
+  width: 250px;
+  height: 50px;
+  background-image: url("../assets/assets/Decoration.svg");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+div.whcont .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+div.whcont .buttons button {
+  background-color: white;
+  border: none;
+  font-size: 22px;
+  color: #737373;
+  width: 200px;
+  padding: 15px;
+}
+div.whcont .buttons button:focus {
+  outline-color: gray;
+}
+div.whcont .bigcontain {
+  width: 70%;
+  height: 600px;
+}
+div.whcont .zzz {
+  background-color: #09d3ac;
+  height: 100px;
+  width: 100px;
+}
+
+div.navbar ul {
+  padding: 15px;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+div.navbar ul li {
+  font-family: "Open Sans";
+  font-size: 20px;
+  color: rgba(1, 5, 36, 0.67);
+  text-decoration: none;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
