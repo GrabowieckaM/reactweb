@@ -58,19 +58,7 @@ class RegistryPage extends React.Component{
 
     }
 
-    submitButton(){
-        if(this.state.mailStatus&&this.state.passwordStatus){
-            return <input type='submit' value='Zaloguj się'/>
-        }
-    }
 
-    failPassword(){
-        if((this.state.passwordStatus===false )){
-            return  <div className='check'>
-                Podane hasło jest zbyt krótkie
-            </div>
-        }
-    }
     failSecPassword(){
         if((!(this.state.passwordState===this.state.secpasswordState)))
             return  <div className='check'>
@@ -78,13 +66,7 @@ class RegistryPage extends React.Component{
             </div>
 
     }
-    failMail(){
-        if(this.state.mailStatus===false){
-            return  <div className='check'>
-                Podany email jest nieprawidłowy
-            </div>
-        }
-    }
+
     render() {
         return(
             <div className='registrycont'>
@@ -97,22 +79,60 @@ class RegistryPage extends React.Component{
                         <form>
                             <label>Email<br/>
                                 <input onChange={(a)=>{this.checkEmail(a.target.value)}} value={this.state.mailState} type='email' maxLength='20'/>
-                                       {this.failMail()}
+                                <div className='check' id='checkmail'>
+                                </div>
                             </label>
                             <label>Hasło<br/>
                                 <input onChange={(e)=>{this.checkPassword(e.target.value)}} value={this.state.passwordState} type='password' maxLength='14'/>
-                                {this.failPassword()}
+                                <div className='check' id='checkpass'>
+                                </div>
                             </label>
                             <label>Powtórz hasło<br/>
                                 <input onChange={(e)=>{this.checkSecPassword(e.target.value)}} value={this.state.secpasswordState} type='password' maxLength='14'/>
-
-                                {this.failSecPassword()}
+                                <div className='check' id='checkpass2'>
+                                </div>
                             </label>
                         </form>
                     </div>
                     <div className='pages'>
                         <a href='/log'>Zaloguj się</a>
-                        <input type='submit' value='Zarejestruj się'/>
+                        <input type='submit' value='Zarejestruj się' onClick={(e)=>{
+
+
+                            if(!(this.state.mailState.length>=6 && typeof this.state.mailState==='string' && this.state.mailState.includes('@'))){
+                                e.preventDefault();
+                                let mail=document.querySelector('#checkmail');
+                                mail.innerText="Mail jest niepoprawny!"
+                            }else{
+                                this.setState({
+                                    mailStatus:true,
+                                    mailState:'',
+                                })
+                            }
+
+                            if(!(this.state.passwordState.length>= 6 && typeof this.state.passwordState==='string')){
+                                e.preventDefault();
+                                let pass=document.querySelector('#checkpass');
+                                pass.innerText="Hasło jest zbyt krótkie!"
+                            }else{
+                                this.setState({
+                                    passwordStatus:true,
+                                    passwordState:'',
+                                })
+                            }
+
+                            if((!(this.state.passwordState===this.state.secpasswordState))){
+                                e.preventDefault();
+                                let pass2=document.querySelector('#checkpass2');
+                                pass2.innerText="Hasła nie są takie same!"
+                            }else{
+                                this.setState({
+                                    secpasswordStatus: true,
+                                    secpasswordState: '',
+                                })
+                            }
+
+                        }}/>
                     </div>
                 </div>
             </div>
