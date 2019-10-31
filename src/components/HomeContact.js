@@ -12,16 +12,16 @@ class HomeContact extends React.Component{
     email = (a)=>{
         this.setState({
             mailState: a
-        })}
+        })};
 
     name = (a)=>{
         this.setState({
             nameState: a
-        })}
+        })};
     message = (a)=>{
         this.setState({
             messageState: a
-        })}
+        })};
 render() {
     return(
         <>
@@ -32,6 +32,12 @@ render() {
                 <div className="contr">
                     <h2>Skontaktuj sie z nami</h2>
                     <div className="deco">
+
+                    </div>
+                    <div className='positive' id='pos1'>
+
+                    </div>
+                    <div className='positive' id={'pos2'}>
 
                     </div>
                     <div className='formdiv'>
@@ -67,49 +73,59 @@ render() {
                             </div>
                             <div className='buttoncont'>
                                 <button type='submit' value='wyślij' onClick={(e)=>{
-                                    if(!(this.state.mailState.length>=6 && typeof this.state.mailState==='string' && this.state.mailState.includes('@'))){
-                                        e.preventDefault();
-                                        let mail=document.querySelector('#checkmail');
-                                        mail.innerText="Mail jest niepoprawny!"
+                                    if((!(this.state.mailState.length>=6 && typeof this.state.mailState==='string' && this.state.mailState.includes('@'))) &&
+                                        this.state.nameState.includes(' ') && this.state.messageState.length < 120) {
+                                        if (!(this.state.mailState.length >= 6 && typeof this.state.mailState === 'string' && this.state.mailState.includes('@'))) {
+                                            e.preventDefault();
+                                            let mail = document.querySelector('#checkmail');
+                                            mail.innerText = "Mail jest niepoprawny!"
+                                        } else {
+                                            this.setState({
+                                                mailState: '',
+                                            })
+                                        }
+                                        if (this.state.nameState.includes(' ')) {
+                                            e.preventDefault();
+                                            let name = document.querySelector('#checkname');
+                                            name.innerText = "Imie musi być wyrazem!"
+                                        } else {
+                                            this.setState({
+                                                nameState: '',
+                                            })
+                                        }
+                                        if (this.state.messageState.length < 120) {
+                                            e.preventDefault();
+                                            let text = document.querySelector('#checktext');
+                                            text.innerText = "Wiadomość musi mieć minimum 120 znaków!"
+                                        } else {
+                                            this.setState({
+                                                messageState: '',
+                                            })
+                                        }
                                     }else{
-                                        this.setState({
-                                            mailState:'',
-                                        })
-                                    }
-                                    if(this.state.nameState.includes(' ')){
-                                        e.preventDefault();
-                                        let name=document.querySelector('#checkname');
-                                        name.innerText="Imie musi być wyrazem!"
-                                    }else{
-                                        this.setState({
-                                            nameState:'',
-                                        })
-                                    }
-                                    if(this.state.messageState.length < 160){
-                                        e.preventDefault();
-                                        let text=document.querySelector('#checktext');
-                                        text.innerText="Wiadomość musi mieć minimum 120 znaków!"
-                                    }else{
-                                        this.setState({
-                                            messageState:'',
-                                        })
+                                        let pos1=document.querySelector('#pos1');
+                                        let pos2=document.querySelector('#pos2');
+                                        pos1.innerText="Formularz został wysłany!";
+                                        pos2.innerText="Niedługo się z tobą skontaktujemy!";
+
+                                        let VarData=new FormData(document.querySelector("form"));
+                                        fetch('https://fer-api.coderslab.pl/v1/portfolio/contact',
+                                            {
+                                                method: "POST", // *GET, POST, PUT, DELETE, etc.
+                                                mode: "cors", // no-cors, cors, *same-origin
+                                                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                                                credentials: "same-origin", // include, *same-origin, omit
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    // "Content-Type": "application/x-www-form-urlencoded",
+                                                },
+                                                redirect: "follow", // manual, *follow, error
+                                                referrer: "no-referrer", // no-referrer, *client
+                                                body: VarData,
+                                            }).then(r => console.log(r));
                                     }
 
-                                    // let VarData=new FormData(document.querySelector("form"));
-                                    // fetch('https://fer-api.coderslab.pl/v1/portfolio/contact',
-                                    //     {
-                                    //         method: "POST", // *GET, POST, PUT, DELETE, etc.
-                                    //         mode: "cors", // no-cors, cors, *same-origin
-                                    //         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-                                    //         credentials: "same-origin", // include, *same-origin, omit
-                                    //         headers: {
-                                    //             "Content-Type": "application/json",
-                                    //             // "Content-Type": "application/x-www-form-urlencoded",
-                                    //         },
-                                    //         redirect: "follow", // manual, *follow, error
-                                    //         referrer: "no-referrer", // no-referrer, *client
-                                    //         body: VarData,
-                                    //     }).then(r => console.log(r));
+
 
 
                                 }}>Wyślij</button>

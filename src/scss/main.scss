@@ -555,6 +555,13 @@ div.registrycont{
   font-size: 14px;
 
 }
+div.positive{
+  font-family: $font-base;
+  color: green;
+  padding-top: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
 
 //WHOS HELPING_____________________________________
 div.whcont{
@@ -594,16 +601,29 @@ div.whcont{
     }
   }
 
-  .bigcontain{
+  #bigcontain{
     width: 70%;
     height:600px ;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  .zzz{
-    background-color: #09d3ac;
-    height: 100px;
-    width: 100px;
-  }
+ #frstpag,#secpag,#thrdpag {
+
+ display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+#rendertools>li,#rendertools2>li,#rendertools3>li{
+  text-align: left;
+}
+   #page-numbers,#page-numbers2,#page-numbers3{
+     display: flex;
+     justify-content: center;
+   }
+
+ }
+
 }
 
 //SCROLLLLL__________________________________________________________
@@ -623,3 +643,4 @@ div.navbar{
     }
   }
 }
+
